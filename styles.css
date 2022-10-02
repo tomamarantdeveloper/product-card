@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,200&family=Montserrat:wght@500&display=swap');
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color:hsl(30, 38%, 92%) ;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.grid{
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.img, img{
+    max-width: 100%;
+}
+
+.card-content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pro-cat{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
+    color: hsl(228, 4%, 27%);    font-weight: 500;
+}
+
+h2.pro-name{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+p.pro-des{
+    color:hsl(47, 7%, 26%);
+    line-height: 1.6em;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+p.current-price{
+    font-family: 'Fraunces', serif;
+    color: hsl(33, 48%, 77%);;
+    font-size: 25px;
+    padding-right: 25px;
+}
+
+p.old-price{
+    color: hsl(0, 0%, 6%);
+    text-decoration: line-through;
+}
+
+button.cta{
+    background-color: hsl(30, 38%, 92%);
+    border: none;
+    padding:12px 0;
+    border-radius:12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 3s ease;
+    width: 100%;
+}
+
+button.cta:hover{
+    background-color:hsl(32, 53%, 80%);
+}
+
+@media only screen and (max-width: 628px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+    }
+    .card-content{
+        display: block;
+    }
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 23px;
+    }
+}
+
+
+
+
